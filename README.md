@@ -144,7 +144,7 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 &nbsp;
 
-> :warning: los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
+> :warning: Los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
 
 &nbsp;
 
@@ -163,8 +163,6 @@ En caso de que sea necesario eliminar la base de datos se puede ejecutar el sigu
 &nbsp;
 
 #### 7. Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
-
-&nbsp;
 
 > :warning:
 > En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
