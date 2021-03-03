@@ -239,7 +239,11 @@ Para trabajar en una **branched database** Rails hace uso de la configuración d
 
 Par habilitar la **branched database** es necesario ejecutar el siguiente comando en la **branch** donde se va a crear la nueva base de datos.
 
+&nbsp;
+
 > :warning: Se debe remplazar `[BRANCHE_NAME]` con el nombre de la nueva base de datos.
+
+&nbsp;
 
 ```bash
   # Remember to replace [BRANCH_NAME] with the actual name of the branch
@@ -249,8 +253,6 @@ Par habilitar la **branched database** es necesario ejecutar el siguiente comand
 Rails buscará la base de datos `do-lenga-dev-db_[BRANCH_NAME]` (si no se cambio el nombre por defecto en `database.yml`).
 
 Ahora solo hace falta crear la nueva base de datos:
-
-> All the `rake`, `rails` and other commands should be runned with the `bundle exec` in order to ensure the use of the right versions of the gems and their dependencies
 
 ```bash
   bundle exec rake db:create
