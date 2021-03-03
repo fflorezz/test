@@ -134,9 +134,13 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 &nbsp;
 
-#### 6 - Configurar la base de datos
+#### 6. Configurar la base de datos
+
+&nbsp;
 
 > :warning: Todos los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
+
+&nbsp;
 
 Crear la base de datos:
 
@@ -144,7 +148,11 @@ Crear la base de datos:
   bundle exec rake db:create
 ```
 
+&nbsp;
+
 > :wrench: En caso de que sea necesario eliminar la base de datos se puede ejecutar el siguiente comando:
+
+&nbsp;
 
 ```bash
   bundle exec rake db:drop
