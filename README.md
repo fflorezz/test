@@ -2,11 +2,15 @@
 
 Aplicacion pricipal de Donar Online...
 
+&nbsp;
+
 ## Tabla de Contenidos
 
 - [Prerrequisitos](#prerrequisitos)
 - [Instalación](#instalación)
   <!-- - [Repo](#repo) -->
+
+&nbsp;
 
 ## Prerrequisitos
 
@@ -15,6 +19,8 @@ Aplicacion pricipal de Donar Online...
 - Redis >= 3
 - ImageMagick 6.x (Hay algunos problemas entre las últimas versiones y El Capitan OS en Mac, por esta razón es recomendable usar la versión 6 en desarrollo)
 - Node 10.x
+
+&nbsp;
 
 ## Instalación
 
@@ -138,7 +144,7 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 &nbsp;
 
-> :warning: Todos los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
+> :warning: los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
 
 &nbsp;
 
@@ -148,11 +154,7 @@ Crear la base de datos:
   bundle exec rake db:create
 ```
 
-&nbsp;
-
-> :wrench: En caso de que sea necesario eliminar la base de datos se puede ejecutar el siguiente comando:
-
-&nbsp;
+En caso de que sea necesario eliminar la base de datos se puede ejecutar el siguiente comando:
 
 ```bash
   bundle exec rake db:drop
@@ -162,7 +164,12 @@ Crear la base de datos:
 
 #### 7. Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
 
-> :warning: En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
+&nbsp;
+
+> :warning:
+> En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
+
+&nbsp;
 
 **_For PostgreSQL v10.x_**
 
