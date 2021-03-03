@@ -150,13 +150,13 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 Crear la base de datos:
 
-```bash
+```ruby
   bundle exec rake db:create
 ```
 
 En caso de que sea necesario eliminar la base de datos se puede ejecutar el siguiente comando:
 
-```bash
+```ruby
   bundle exec rake db:drop
 ```
 
@@ -167,20 +167,23 @@ En caso de que sea necesario eliminar la base de datos se puede ejecutar el sigu
 &nbsp;
 
 > :warning:
-> En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
+> En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo. Tambien asegurarse que el comando de Postgres corresponda a la version de Postgres instalada en el sistema.
 
-**_For PostgreSQL v10.x_**
+&nbsp;
 
-```bash
+Para PostgreSQL v10.x
+
+```ruby
   bundle exec rake db:structure:load SCHEMA=db/structure.pg10.sql
 ```
 
-**_For PostgreSQL v11.x_**
+Para PostgreSQL v11.x
 
-```bash
+```ruby
   bundle exec rake db:structure:load SCHEMA=db/structure.pg11.sql
 ```
 
+Estos comandos
 This commands will create all the tables and general structure of the database, but everything will be empty.
 
 #### 7 - Be sure that you have the latests version of the database structure
