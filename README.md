@@ -19,6 +19,7 @@ Aplicacion pricipal de Donar Online...
   - [9. Correr el local server](#9-correr-el-local-server)
 - [Otras Consideraciones](#otras-consideraciones)
   - [Branching de La base de Datos](#branching-de-la-base-de-datos)
+  - [Comentarios en el Código](#comentarios-en-el-código)
 
 &nbsp;
 
@@ -257,7 +258,7 @@ And lastly you can load data from other database, for example in this case from 
 
 Or also you can load a blank or empty structure following the step [6](#6---create-the-database-structure-be-sure-to-run-the-right-one-for-your-postgresql-version) on the [Steps to run in development](#steps-to-run-in-development) section
 
-#### Comments in code
+#### Comentarios en el Código
 
 Let's avoid to comment code, only leave them when is necessary.
 Whenever we need to mention that a refactor or another thing is needed in the future,
