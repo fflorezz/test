@@ -214,7 +214,7 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
 
 Rails hace uso de la potente _CLI_ de Ruby, a la cual se puede acceder con el comando:
 
-```bash
+```ruby
   bundle exec rails c
 ```
 
@@ -224,7 +224,18 @@ Rails hace uso de la potente _CLI_ de Ruby, a la cual se puede acceder con el co
 
 #### Branching de la Base de Datos
 
-Sometimes when we are working on features we need to make changes to the **database** structure, and ofently they are destructive, maybe remove a column or rename it. That's why it's important on this cases to work on a **branched database** so if you need to go back to another branch to work on another thing, everything keeps working as expected.
+A veces cuando trabajamos en una nueva funcionalidad necesitamos hacer cambios en la estructura de la base de datos. Estos cambios por lo general suelen ser destructivos. Por este motivo es importante en estos casos trabajar en una **branched database**, de esta manera si se necesita volver a trabajar en una **branch** todo seguirá funcionando de manera correcta.
+
+Para trabajar en una **branched database** `Lenga` hace uso de la configuración de `git` a travéz de las primeras lineas en el archivo `database.yml`:
+
+```ruby
+  <%
+    # git config --bool branch.feature.database true
+    # http://mislav.uniqpath.com/rails/branching-the-database-along-with-your-code/
+    branch = `git symbolic-ref HEAD 2>/dev/null`.chomp.sub('refs/heads/', '')
+    suffix = `git config --bool branch.#{branch}.database`.chomp == 'true' ? "_#{branch}" : ""
+  %>
+```
 
 If you duplicate the `database.yml.example` file you will see that in the first few lines there is some _weird_ ruby code. This code allows you to reference to another database if there is a `true` value on a config in the git branch.
 
