@@ -65,6 +65,8 @@ Verificar la instalación:
   # Delegates (built-in): bzlib djvu fontconfig freetype jbig jng jpeg lcms lqr ltdl lzma openexr png tiff wmf x xml zlib
 ```
 
+&nbsp;
+
 #### 2. Clonar el repo e ingresar al directorio `lenga`:
 
 ```bash
@@ -75,6 +77,8 @@ Verificar la instalación:
   cd lenga
 ```
 
+&nbsp;
+
 #### 3. Instalar Bundler 2 y ejecutar el comando `bundle`:
 
 ```ruby
@@ -84,6 +88,8 @@ Verificar la instalación:
 ```ruby
   bundle
 ```
+
+&nbsp;
 
 #### 4. Configurar archivos del directorio `config/`
 
@@ -108,6 +114,8 @@ Duplicar cada uno de los archivos y remover la extensión `.example`:
     ╰─ services.yml.example
 ```
 
+&nbsp;
+
 #### 5 - Añadir el archivo `GeoLite`:
 
 Descargar la base de datos mas reciente del siguiente link: [https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz](https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)
@@ -124,7 +132,9 @@ En caso de que no exista el directorio `tmp/` crearlo:
     ╰─ GeoLite2-Country.mmdb
 ```
 
-#### 5 - Configurar la base de datos
+&nbsp;
+
+#### 6 - Configurar la base de datos
 
 > :warning: Todos los comandos `rake`, `rails` y otros deben ejecutarse junto al comando `bundle exec` de manera que puedan correr las versiones correctas de las gems y su dependencias.
 
@@ -140,7 +150,9 @@ Crear la base de datos:
   bundle exec rake db:drop
 ```
 
-#### 6 - Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
+&nbsp;
+
+#### 7. Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
 
 > :warning: En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
 
