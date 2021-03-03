@@ -164,10 +164,10 @@ En caso de que sea necesario eliminar la base de datos se puede ejecutar el sigu
 
 #### 7. Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
 
+&nbsp;
+
 > :warning:
 > En los siguientes pasos es necesario que los servidores de **PostgreSQL** y **Redis** esten corriendo
-
-&nbsp;
 
 **_For PostgreSQL v10.x_**
 
