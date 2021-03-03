@@ -162,7 +162,7 @@ En caso de que sea necesario eliminar la base de datos se puede ejecutar el sigu
 
 &nbsp;
 
-#### 7. Crear la estructura de la base de datos (be sure to run the right one for your PostgreSQL version)
+#### 7. Crear la estructura de la base de datos:
 
 &nbsp;
 
@@ -183,26 +183,23 @@ Para PostgreSQL v11.x
   bundle exec rake db:structure:load SCHEMA=db/structure.pg11.sql
 ```
 
-Estos comandos
-This commands will create all the tables and general structure of the database, but everything will be empty.
+Estos comandos crearan todas las tablas y estructuras generales de la base de datos, pero estaran vacias.
 
-#### 7 - Be sure that you have the latests version of the database structure
+&nbsp;
 
-> All the `rake`, `rails` and other commands should be runned with the `bundle exec` in order to ensure the use of the right versions of the gems and their dependencies
+#### 7. Migrar la ultima versión de la base de datos:
 
-```bash
+```ruby
   bundle exec rake db:migrate
 ```
 
-#### 8 - Run the local server (or console)
+#### 8. Correr el local server:
 
-> All the `rake`, `rails` and other commands should be runned with the `bundle exec` in order to ensure the use of the right versions of the gems and their dependencies
-
-```bash
+```ruby
   bundle exec rails s
 ```
 
-Ruby has a powerful _CLI_ and Rails take advantage of it, you can run a Rails console by running:
+Rails hace uso de la poderosa _CLI_ de Ruby y se puede ejecutar con el comando:
 
 ```bash
   bundle exec rails c
