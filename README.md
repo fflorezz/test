@@ -9,6 +9,10 @@ Aplicacion pricipal de Donar Online...
 - [Prerrequisitos](#prerrequisitos)
 - [Instalación](#instalación)
   - [1. Instalar ImageMagick](#1-instalar-imagemagick)
+  - [2. Clonar el repo](#2-clonar-el-repo-e-ingresar-al-directorio-lenga)
+  - [3. Instalar Bundler 2](#3-instalar-bundler-2-y-ejecutar-el-comando-bundle)
+  - [4. Configurar archivos del directorio config/](#4-configurar-archivos-del-directorio-config)
+  - [5 - Añadir el archivo GeoLite](#5-añadir-el-archivo-geolite)
 
 &nbsp;
 
@@ -122,7 +126,7 @@ Duplicar cada uno de los archivos y remover la extensión `.example`:
 
 &nbsp;
 
-#### 5 - Añadir el archivo `GeoLite`:
+#### 5. Añadir el archivo `GeoLite`:
 
 Descargar la base de datos mas reciente del siguiente link: [https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz](https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)
 
