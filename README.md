@@ -102,7 +102,7 @@ Verificar la instalación:
   gem install bundler -v '~> 2.0'
 ```
 
-```ruby
+```bash
   bundle
 ```
 
@@ -161,13 +161,13 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 Crear la base de datos:
 
-```ruby
+```bash
   bundle exec rake db:create
 ```
 
 En caso de que sea necesario eliminar la base de datos se puede ejecutar el siguiente comando:
 
-```ruby
+```bash
   bundle exec rake db:drop
 ```
 
@@ -184,13 +184,13 @@ En caso de que sea necesario eliminar la base de datos se puede ejecutar el sigu
 
 Para PostgreSQL v10.x
 
-```ruby
+```bash
   bundle exec rake db:structure:load SCHEMA=db/structure.pg10.sql
 ```
 
 Para PostgreSQL v11.x
 
-```ruby
+```bash
   bundle exec rake db:structure:load SCHEMA=db/structure.pg11.sql
 ```
 
@@ -200,7 +200,7 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
 
 #### 8. Migrar la ultima versión de la base de datos:
 
-```ruby
+```bash
   bundle exec rake db:migrate
 ```
 
@@ -208,13 +208,13 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
 
 #### 9. Correr el local server:
 
-```ruby
+```bash
   bundle exec rails s
 ```
 
 Rails hace uso de la potente _CLI_ de Ruby, a la cual se puede acceder con el comando:
 
-```ruby
+```bash
   bundle exec rails c
 ```
 
@@ -224,9 +224,9 @@ Rails hace uso de la potente _CLI_ de Ruby, a la cual se puede acceder con el co
 
 #### Branching de la Base de Datos
 
-A veces cuando trabajamos en una nueva funcionalidad necesitamos hacer cambios en la estructura de la base de datos. Estos cambios por lo general suelen ser destructivos. Por este motivo es importante en estos casos trabajar en una **branched database**, de esta manera si se necesita volver a trabajar en una **branch** todo seguirá funcionando de manera correcta.
+A veces cuando se trabaja en una nueva funcionalidad es necesario hacer cambios en la estructura de la base de datos. Estos cambios por lo general suelen ser destructivos. Por este motivo es importante en estos casos trabajar en una **branched database**, de manera que si se necesita volver a trabajar en una **branch** todo seguirá funcionando de forma correcta.
 
-Para trabajar en una **branched database** `Lenga` hace uso de la configuración de `git` a travéz de las primeras lineas en el archivo `database.yml`:
+Para trabajar en una **branched database** Rails hace uso de la configuración de `git` en las primeras lineas del archivo `database.yml`:
 
 ```bash
   <%
@@ -237,18 +237,18 @@ Para trabajar en una **branched database** `Lenga` hace uso de la configuración
   %>
 ```
 
-If you duplicate the `database.yml.example` file you will see that in the first few lines there is some _weird_ ruby code. This code allows you to reference to another database if there is a `true` value on a config in the git branch.
+Par habilitar la **branched database** es necesario ejecutar el siguiente comando en la **branch** donde se va a crear la nueva base de datos.
 
-So to do it, you need to run the following commands on the branch in which you need to create a new database, you should replace `[BRANCH_NAME]` with the actual name of the branch:
+> :warning: Se debe remplazar `[BRANCHE_NAME]` con el nombre de la nueva base de datos.
 
 ```bash
   # Remember to replace [BRANCH_NAME] with the actual name of the branch
   git config --bool branch.[BRANCH_NAME].database true
 ```
 
-With this the rails project knows that it will look for a database named: `do-lenga-dev-db_[BRANCH_NAME]` (if you did not change the default name on your `database.yml`)
+Rails buscará la base de datos `do-lenga-dev-db_[BRANCH_NAME]` (si no se cambio el nombre por defecto en `database.yml`).
 
-So now you need to create that new database
+Ahora solo hace falta crear la nueva base de datos:
 
 > All the `rake`, `rails` and other commands should be runned with the `bundle exec` in order to ensure the use of the right versions of the gems and their dependencies
 
