@@ -13,6 +13,10 @@ Aplicacion pricipal de Donar Online...
   - [3. Instalar Bundler 2](#3-instalar-bundler-2-y-ejecutar-el-comando-bundle)
   - [4. Configurar archivos del directorio config/](#4-configurar-archivos-del-directorio-config)
   - [5. Añadir el archivo GeoLite](#5-añadir-el-archivo-geolite)
+  - [6. Configurar la base de datos](#6-configurar-la-base-de-datos)
+  - [7. Crear la estructura de la base de datos](#7-crear-la-estructura-de-la-base-de-datos)
+  - [8. Migrar la ultima versión de la base de datos](#8-migrar-la-ultima-versión-de-la-base-de-datos)
+  - [9. Correr el local server](#9-correr-el-local-server)
 - [Otras Consideraciones](#otras-consideraciones)
   - [Branching de La base de Datos](#branching-de-la-base-de-datos)
 
@@ -146,7 +150,7 @@ En caso de que no exista el directorio `tmp/` crearlo:
 
 &nbsp;
 
-#### 6. Configurar la base de datos
+#### 6. Configurar la base de datos:
 
 &nbsp;
 
@@ -193,7 +197,7 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
 
 &nbsp;
 
-#### 7. Migrar la ultima versión de la base de datos:
+#### 8. Migrar la ultima versión de la base de datos:
 
 ```ruby
   bundle exec rake db:migrate
@@ -201,7 +205,7 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
 
 &nbsp;
 
-#### 8. Correr el local server:
+#### 9. Correr el local server:
 
 ```ruby
   bundle exec rails s
@@ -212,6 +216,8 @@ Rails hace uso de la poderosa _CLI_ de Ruby y se puede ejecutar con el comando:
 ```bash
   bundle exec rails c
 ```
+
+&nbsp;
 
 ## Otras Consideraciones
 
