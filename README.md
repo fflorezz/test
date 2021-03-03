@@ -12,7 +12,9 @@ Aplicacion pricipal de Donar Online...
   - [2. Clonar el repo](#2-clonar-el-repo-e-ingresar-al-directorio-lenga)
   - [3. Instalar Bundler 2](#3-instalar-bundler-2-y-ejecutar-el-comando-bundle)
   - [4. Configurar archivos del directorio config/](#4-configurar-archivos-del-directorio-config)
-  - [5 - Añadir el archivo GeoLite](#5-añadir-el-archivo-geolite)
+  - [5. Añadir el archivo GeoLite](#5-añadir-el-archivo-geolite)
+- [Otras Consideraciones](#otras-consideraciones)
+  - [Branching de La base de Datos](#branching-de-la-base-de-datos)
 
 &nbsp;
 
@@ -197,6 +199,8 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
   bundle exec rake db:migrate
 ```
 
+&nbsp;
+
 #### 8. Correr el local server:
 
 ```ruby
@@ -209,9 +213,9 @@ Rails hace uso de la poderosa _CLI_ de Ruby y se puede ejecutar con el comando:
   bundle exec rails c
 ```
 
-## Other considerations
+## Otras Consideraciones
 
-#### Database branching
+#### Branching de la Base de Datos
 
 Sometimes when we are working on features we need to make changes to the **database** structure, and ofently they are destructive, maybe remove a column or rename it. That's why it's important on this cases to work on a **branched database** so if you need to go back to another branch to work on another thing, everything keeps working as expected.
 
