@@ -212,7 +212,7 @@ Estos comandos crearan todas las tablas y estructuras generales de la base de da
   bundle exec rails s
 ```
 
-Rails hace uso de la poderosa _CLI_ de Ruby y se puede ejecutar con el comando:
+Rails hace uso de la potente _CLI_ de Ruby y se puede ejecutar con el comando:
 
 ```bash
   bundle exec rails c
