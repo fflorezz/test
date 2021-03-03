@@ -228,7 +228,7 @@ A veces cuando trabajamos en una nueva funcionalidad necesitamos hacer cambios e
 
 Para trabajar en una **branched database** `Lenga` hace uso de la configuración de `git` a travéz de las primeras lineas en el archivo `database.yml`:
 
-```ruby
+```bash
   <%
     # git config --bool branch.feature.database true
     # http://mislav.uniqpath.com/rails/branching-the-database-along-with-your-code/
