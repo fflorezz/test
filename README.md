@@ -8,7 +8,7 @@ Aplicacion pricipal de Donar Online...
 
 - [Prerrequisitos](#prerrequisitos)
 - [Instalación](#instalación)
-  <!-- - [Repo](#repo) -->
+  - [1. Instalar ImageMagick](#1-instalar-imagemagick)
 
 &nbsp;
 
@@ -17,7 +17,7 @@ Aplicacion pricipal de Donar Online...
 - Ruby >= 2.4
 - PostgreSQL >= 9.6
 - Redis >= 3
-- ImageMagick 6.x (Hay algunos problemas entre las últimas versiones y El Capitan OS en Mac, por esta razón es recomendable usar la versión 6 en desarrollo)
+- ImageMagick 6.x (Hay algunos problemas entre las últimas versiones y El Capitan OS en Mac, por esta razón se recomienda usar la versión 6 en el entorno de desarrollo)
 - Node 10.x
 
 &nbsp;
